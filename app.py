@@ -34,7 +34,7 @@ def create_user():
     new_user = {"id": last_user_id + 1, **data}
     users.append(new_user)
 
-    return {"msg": "User created", "user": new_user}
+    return {"msg": "User created", "user": new_user}, 201
 
 
 @app.route("/api/users/<int:user_id>", methods=["PUT", "PATCH"])
